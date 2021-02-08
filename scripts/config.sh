@@ -75,9 +75,9 @@ function default_open_command () {
   if [[ $(program_exists "cygstart") = "1" ]]; then
     echo "xargs cygstart"
   elif [[ $(program_exists "xdg-open") = "1" ]]; then
-    echo "xargs xdg-open"
+    echo "xargs -n 1 xdg-open"
   elif [[ $(program_exists "open") = "1" ]]; then
-    echo "xargs open"
+    echo "xargs -n 1 open"
   fi
 }
 
